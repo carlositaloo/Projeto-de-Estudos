@@ -8,7 +8,7 @@ from time import sleep
 import pygame
 
 pygame.init()
-pygame.mixer.music.load('C:/Users/Carlos_Italo/Desktop/Projeto Python/Arquivos/Music-8bit-game.mp3')
+pygame.mixer.music.load('D:/Users/Carlos_Italo/Desktop/Meu Github/Projeto-Estudos/Projeto Python/Arquivos/Music-8bit-game.mp3')
 pygame.mixer.music.play()
 pygame.mixer.music.set_volume(0.01)
 

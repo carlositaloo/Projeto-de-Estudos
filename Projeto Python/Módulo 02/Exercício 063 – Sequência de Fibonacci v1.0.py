@@ -1,3 +1,6 @@
+# 063: Escreva um programa que leia um número N inteiro qualquer e mostre na tela os N primeiros elementos de uma Sequência de Fibonacci. Exemplo:
+# 0 – 1 – 1 – 2 – 3 – 5 – 8
+
 from os import system
 
 system('cls')
@@ -15,4 +18,4 @@ while n > 0:
     F2 = Fn
     Fn = F1 + F2
     n -= 1
-print('\n\n\n')
+print('\n\n')

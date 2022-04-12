@@ -23,4 +23,4 @@ while sair == False:
         print('[green][PAR] Você ganhou, jogo novamente!')
     else:
         print('ERRO!!!')
-print('\n\n')
+print()

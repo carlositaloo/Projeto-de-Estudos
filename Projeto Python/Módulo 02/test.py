@@ -1,11 +1,10 @@
-f1 = 0
-f2 = 1
-f3 = f1 + f2
-c = 0
-num = int(input("Digite a quantidade de termos da sequência de fibonacci vc quer ver: "))
-while c < num:
-    print(f1)
-    f1 = f2
-    f2 = f3
-    f3 = f1 + f2
-    c += 1
+from os import system
+
+system('cls')
+
+linha = '-' * 50
+titulo = 'Aulas de Python'
+
+print(titulo.ljust(50, '-'))
+print(titulo.center(50))
+print(titulo.rjust(50, '+'))

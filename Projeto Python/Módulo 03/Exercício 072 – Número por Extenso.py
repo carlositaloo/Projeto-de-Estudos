@@ -1,8 +1,5 @@
-"""
-Exercício Python 72: Crie um programa que tenha uma dupla totalmente preenchida com uma contagem por
-extenso, de zero até vinte. Seu programa deverá ler um número pelo teclado (entre 0 e 20) e
-mostrá-lo por extenso.
-"""
+#Crie um programa que tenha uma dupla totalmente preenchida com uma contagem por extenso, de zero até vinte. Seu programa deverá ler um número pelo teclado (entre 0 e 20) e mostrá-lo por extenso.
+
 from os import system
 
 system('cls')
@@ -14,3 +11,11 @@ contagem = int(input('Digite um número de 0 a 20 para saber seu nome por extens
 while contagem not in range(0, 21):
     contagem = int(input('Digite um número de 0 a 20 para saber seu nome por extenso: '))
 print(f'\n    Voce Digitou: {contagem} - {numero[contagem]}\n\n')
+
+
+# while True:
+#     contagem = int(input('Digite um número de 0 a 20: '))
+#     if 0 <= contagem <= 20:
+#         break
+#     print('Tente novamente. ')
+# print(f'\n    Voce Digitou: {contagem} - {numero[contagem]}\n\n')

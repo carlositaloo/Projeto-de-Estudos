@@ -6,7 +6,7 @@ from random import randint
 
 system('cls')
 
-tupla = (randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))
+tupla = (randint(1, 10), randint(1, 10), randint(10, 100), randint(1, 10), randint(1, 10))
 
 print('\nNúmeros randomizados:\n', tupla)
 

@@ -40,4 +40,3 @@ for c in tupla:
         print(c, end=', ')
 
 print('\n\n')
-

@@ -2,7 +2,8 @@ from os import system
 
 system('cls')
 
-tupla = (100)
-tupla = input('Digite algo: ')
+cars = ['Ford', 'BMW', 'Volvo']
 
-print(tupla)
+cars.sort()
+
+print(cars)

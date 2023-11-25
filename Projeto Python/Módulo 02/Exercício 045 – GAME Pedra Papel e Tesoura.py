@@ -1,20 +1,40 @@
 # 045: Crie um programa que faça o computador jogar Jokenpô com você.
 
-from os import system
+import os
 from rich import print
 from emoji import emojize
 from random import randint, choice
 from time import sleep
 import pygame
 
-pygame.init()
-pygame.mixer.music.load('D:/Users/Carlos_Italo/Desktop/Github/Projeto-Estudos/Projeto Python/Arquivos/Music-8bit-game.mp3')
-pygame.mixer.music.play()
-pygame.mixer.music.set_volume(0.01)
+os.system('cls')
+# Caminho absoluto para o diretório do script atual
+diretorio_script = os.path.dirname(os.path.abspath(__file__))
 
-system('cls')
+# Construir o caminho relativo a partir do diretório do script
+caminho_relativo = os.path.join(diretorio_script, "..", "Arquivos")
+
+# Resolve o caminho relativo para um caminho absoluto
+caminho_relativo_absoluto = os.path.abspath(caminho_relativo)
+
+# Construir o caminho completo para o arquivo 'Music-8bit-game.mp3'
+caminho_do_arquivo = os.path.join(caminho_relativo_absoluto, "Music-8bit-game.mp3")
+
+print(f'\n\n{caminho_do_arquivo}\n\n')
+
+
+# Verificar se o arquivo existe
+if not os.path.exists(caminho_do_arquivo):
+    print("Erro: O arquivo não foi encontrado no caminho:", caminho_do_arquivo)
+else:
+    # Inicializando pygame e carregando a música
+    pygame.init()
+    pygame.mixer.music.load(caminho_do_arquivo)
+    pygame.mixer.music.play()
+    pygame.mixer.music.set_volume(0.01)
+
+os.system('cls')
 sair = ''
-
 
 def inicio():
     print(f'[bold red]#[/bold red]' * 59)
@@ -28,7 +48,7 @@ def inicio():
     print(f'[bold red]##[/bold red]', ' ' * 53, '[bold red]##[/bold red]')
     print(f'[bold red]#[/bold red]' * 59)
 def carregamento():
-    system('cls')
+    os.system('cls')
     print(f'[bold red]#[/bold red]' * 59)
     print(f'[bold red]##[/bold red]', ' ' * 53, '[bold red]##[/bold red]')
     print(
@@ -39,7 +59,7 @@ def carregamento():
     print(f'[bold red]##[/bold red]        ♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢        [bold red]##[/bold red]')
     print(f'[bold red]#[/bold red]' * 59)
     sleep(0.3)
-    system('cls')
+    os.system('cls')
 
     print(f'[bold red]#[/bold red]' * 59)
     print(f'[bold red]##[/bold red]', ' ' * 53, '[bold red]##[/bold red]')
@@ -51,7 +71,7 @@ def carregamento():
     print(f'[bold red]##[/bold red]        [bold yellow]♦♦♦[/bold yellow]♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢        [bold red]##[/bold red]')
     print(f'[bold red]#[/bold red]' * 59)
     sleep(0.5)
-    system('cls')
+    os.system('cls')
 
     print(f'[bold red]#[/bold red]' * 59)
     print(f'[bold red]##[/bold red]', ' ' * 53, '[bold red]##[/bold red]')
@@ -63,7 +83,7 @@ def carregamento():
     print(f'[bold red]##[/bold red]        [bold yellow]♦♦♦♦♦♦♦[/bold yellow]♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢        [bold red]##[/bold red]')
     print(f'[bold red]#[/bold red]' * 59)
     sleep(0.1)
-    system('cls')
+    os.system('cls')
 
     print(f'[bold red]#[/bold red]' * 59)
     print(f'[bold red]##[/bold red]', ' ' * 53, '[bold red]##[/bold red]')
@@ -75,7 +95,7 @@ def carregamento():
     print(f'[bold red]##[/bold red]        [bold yellow]♦♦♦♦♦♦♦♦♦♦♦♦[/bold yellow]♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢        [bold red]##[/bold red]')
     print(f'[bold red]#[/bold red]' * 59)
     sleep(0.7)
-    system('cls')
+    os.system('cls')
 
     print(f'[bold red]#[/bold red]' * 59)
     print(f'[bold red]##[/bold red]', ' ' * 53, '[bold red]##[/bold red]')
@@ -87,7 +107,7 @@ def carregamento():
     print(f'[bold red]##[/bold red]        [bold yellow]♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦[/bold yellow]♢♢♢♢♢♢♢♢♢♢♢♢♢♢♢        [bold red]##[/bold red]')
     print(f'[bold red]#[/bold red]' * 59)
     sleep(0.9)
-    system('cls')
+    os.system('cls')
 
     print(f'[bold red]#[/bold red]' * 59)
     print(f'[bold red]##[/bold red]', ' ' * 53, '[bold red]##[/bold red]')
@@ -99,7 +119,7 @@ def carregamento():
     print(f'[bold red]##[/bold red]        [bold yellow]♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦[/bold yellow]♢♢♢♢        [bold red]##[/bold red]')
     print(f'[bold red]#[/bold red]' * 59)
     sleep(0.5)
-    system('cls')
+    os.system('cls')
 
     print(f'[bold red]#[/bold red]' * 59)
     print(f'[bold red]##[/bold red]', ' ' * 53, '[bold red]##[/bold red]')
@@ -111,7 +131,7 @@ def carregamento():
     print(f'[bold red]##[/bold red]        [bold yellow]♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦[/bold yellow]        [bold red]##[/bold red]')
     print(f'[bold red]#[/bold red]' * 59)
     sleep(1)
-    system('cls')
+    os.system('cls')
 def resultado():
     if voce == '1':
         if maquina == 1:
@@ -263,4 +283,4 @@ while sair == '':
 
     resultado()
     sair = input(f"{'Pressione Enter para jogar novamente: ':>48}")
-    system('cls')
+    os.system('cls')

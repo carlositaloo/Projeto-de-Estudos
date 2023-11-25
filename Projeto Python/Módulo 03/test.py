@@ -1,9 +1,14 @@
-from os import system
+import os
 
-system('cls')
+os.system('cls')
+# Caminho absoluto para o diretório do script atual
+diretorio_script = os.path.dirname(os.path.abspath(__file__))
 
-cars = ['Ford', 'BMW', 'Volvo']
+print(diretorio_script)
 
-cars.sort()
+# Construir o caminho relativo a partir do diretório do script
+caminho_relativo = os.path.join(diretorio_script, "..", "..")
+# Resolve o caminho relativo para um caminho absoluto
+caminho_relativo = os.path.abspath(caminho_relativo)
 
-print(cars)
+print(caminho_relativo)
